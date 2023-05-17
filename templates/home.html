@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumor detection
+
+    </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/x-icon" href="static\images\Untitled-design.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="profile">
+                <img src="static\images\Brain Icon.png" alt="">
+                <h3>BRAIN TUMOR DETECTION SYSTEM</h3>
+            </div>
+            <div class="info">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="portfolio">
+        <div class="container">
+            <div class="social">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="me">
+                <h4>INTRODUCTION</h4>
+                <p>Brain tumour is a mass or growth of abnormal cells in your brain.
+                    Brain tumors can begin in your brain (primary brain tumors), or cancer can begin in other parts of
+                    your body and spread to your brain as secondary (metastatic) brain tumors.
+                </p>
+                <p>Aim is to build an efficient method which helps in the segmentation and detection of the brain tumour
+                    without any human assistance based on Convolutional Neural Network.</p>
+            </div>
+            <div class="profile-2">
+                <div class="outer-circle">
+                    <ul>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-cloud"></i>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </ul>
+                </div>
+                <div class="inner-circle">
+                    <div class="image">
+                        <img src="static\images\Brain Icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="salary">
+        <div class="container">
+            <h1>BRAIN TUMOR DETECTION</h1>
+            <div class="search-box">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <input type="file" id="fileup" name="file" accept="image/*" oninput="loadFile(event)">
+                    <p><img id="output" width="200" height="150" /></p>
+                    <h2 id="res">Result : <span id="ans"></span></h2>
+                    <button type="submit" id="btn-predict">Predict</button>
+                </form>
+            </div>
+            </h3>
+        </div>
+        <!-- <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p> -->
+        <!-- <p><label for="file" style="cursor: pointer;">Upload Image</label></p> -->
+
+        <script>
+            var loadFile = function (event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+                return image.src
+            };
+
+
+            document.getElementsByTagName("form")[0].addEventListener("submit", function (e) {
+                e.preventDefault();
+                var fd = new FormData(this);
+                var xhr = new XMLHttpRequest();
+                xhr.open("post", "/upload", true);
+                xhr.onreadystatechange = function (e) {
+                    var ans = JSON.parse(e.target.response)["ans"];
+                    document.getElementById("ans").innerText = ans;
+                }
+                xhr.send(fd);
+            })
+        </script>
+    </section>
+    <script src="/static/js/newjs.js"></script>
+</body>
+
+</html>
