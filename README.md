@@ -38,8 +38,8 @@ Contributions are welcome to further enhance the accuracy and capabilities of Br
 
 If you have any questions, feedback, or suggestions regarding BrainTune, please feel free to reach out:
 
-- Developer: Your Name
-- Email: yourname@example.com
+- Developer: Guneet Singh
+- Email: itsguneetsingh@example.com
 
 Your support and feedback are valuable in improving BrainTune and its effectiveness in brain tumor detection.
 
