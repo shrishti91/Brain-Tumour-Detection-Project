@@ -34,15 +34,6 @@ Contributions are welcome to further enhance the accuracy and capabilities of Br
 4. Push your changes to your forked repository.
 5. Open a pull request, detailing the changes you have made.
 
-## Support and Feedback 📧
 
-If you have any questions, feedback, or suggestions regarding BrainTune, please feel free to reach out:
-
-- Developer: Guneet Singh,  <a href = "https://github.com/aayushkumar20" alt = "GitHub">Aayush Kumar</a>
-- Email: itsguneetsingh@gmail.com
-
-Your support and feedback are valuable in improving BrainTune and its effectiveness in brain tumor detection.
-
----
 
 Thank you for your interest in BrainTune! Together, let's make a difference in the early detection of brain tumors and improve patient outcomes.
